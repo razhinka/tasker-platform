@@ -32,16 +32,16 @@ jobs:
   # 2. Go Microservice Tests
   # -------------------------------------------------------------
   test-go:
-    name: Go Notifier (Go 1.22, Concurrency, Kafka)
+    name: Go Notifier (Go 1.23, Concurrency, Kafka)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Go 1.22
+      - name: Set up Go 1.23
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: '1.23'
           cache-dependency-path: notifier-go/go.sum
 
       - name: Run Go Tests with Race Detector
